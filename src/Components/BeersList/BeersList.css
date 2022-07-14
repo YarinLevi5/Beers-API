@@ -1,0 +1,11 @@
+.beer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 992px) {
+  .beer-list {
+    display: block;
+  }
+}

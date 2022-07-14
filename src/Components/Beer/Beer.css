@@ -1,0 +1,32 @@
+.beer-container {
+  width: 40vw;
+  height: 8vw;
+  display: flex;
+  overflow-y: hidden;
+  border-radius: 3px;
+  margin: 6px;
+  padding: 2px;
+  box-shadow: 0px 0px 10px rgb(175, 173, 173);
+}
+.beer-content {
+  display: flex;
+  flex-flow: column;
+  margin-left: 25px;
+}
+.image-url-container {
+  margin: 10px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.image-url {
+  width: 25px;
+}
+.headline {
+  margin-top: 5px;
+  font-weight: bold;
+}
+.tagline {
+  font-weight: 600;
+  color: rgb(162, 89, 36);
+}
