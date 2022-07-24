@@ -3,9 +3,30 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  height: 90vh;
+  overflow-y: scroll;
+  padding: 10px;
 }
+.btn-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 10vh;
+  text-align: center;
+}
+.loadMoreBtn {
+  outline: none;
+  border: none;
+  background: none;
+  color: rgb(49, 49, 122);
+  font-weight: bold;
+}
+
 @media screen and (max-width: 992px) {
   .beer-list {
-    display: block;
+    padding: 10px;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 }

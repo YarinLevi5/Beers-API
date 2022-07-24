@@ -1,6 +1,6 @@
 .beer-container {
   width: 40vw;
-  height: 8vw;
+  height: 7vw;
   display: flex;
   overflow-y: hidden;
   border-radius: 3px;
@@ -19,9 +19,7 @@
   justify-content: center;
   align-items: center;
 }
-.image-url {
-  width: 25px;
-}
+
 .headline {
   margin-top: 5px;
   font-weight: bold;
@@ -29,4 +27,12 @@
 .tagline {
   font-weight: 600;
   color: rgb(162, 89, 36);
+}
+
+@media screen and (max-width: 992px) {
+  .beer-container {
+    flex-shrink: 0;
+    height: 25vh;
+    width: fit-content;
+  }
 }

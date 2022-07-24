@@ -1,27 +1,27 @@
 import Beer from "../Beer/Beer";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./BeersList.css";
 
 function BeersList({ beersApi }) {
-  // const [index, setIndex] = useState("10");
-  // const [newArrayOfBeers, setData] = useState([]);
+  const beers = 10;
+  const [index, setIndex] = useState(beers);
 
-  // useEffect(() => {
-  //   const arrayOfItems = "10";
-  //   const newArrayOfBeers = [];
-  //   for (let i = 0; i < beersApi.length; i++) {
-  //     if (i < arrayOfItems) newArrayOfBeers.push(beersApi[i]);
-  //   }
-  //   setData(newArrayOfBeers);
-  // }, [index]);
+  const handleNextBeer = () => {
+    setIndex(index + beers);
+  };
 
   return (
     <>
-      {/* <button onClick={() => setIndex(index + 10)}> Load More </button> */}
       <div className="beer-list">
-        {beersApi.map((beer, i) => (
+        {beersApi.slice(0, index).map((beer, i) => (
           <Beer key={i} {...beer} />
         ))}
+      </div>
+      <div className="btn-container">
+        <button className="loadMoreBtn" onClick={handleNextBeer}>
+          {" "}
+          Load More
+        </button>
       </div>
     </>
   );
